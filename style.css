@@ -1,0 +1,28 @@
+.aaaa {
+    width: 200px;
+    height: 400px;
+    background-color: #38c043;
+
+    margin: 1%;
+
+}
+
+.item {
+    width: 200px;
+    height: 400px;
+    background-color: #121212;
+
+    margin: 1%;
+
+   transition: all 0.4s ease-out;
+
+    transform: translateY(5%);
+    opacity: 0.1;
+
+}
+
+.scrolled {
+    transform: translateY(0%);
+    opacity: 1;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>row</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style>
+            body {
+                background-color: #121212;
+                margin: 1.5%;
+            }
+
+            .row {
+                display: flex;
+                width: 100%;
+                height: 16vh;
+                background-color: antiquewhite;
+                align-items: center;
+            }
+
+            svg {
+                height: 75px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sad"></div>
+
+
+        <script>
+            function random() {
+                return Math.floor(Math.random() * 3)
+            }
+
+            var colmn = 4
+            var row = 8
+
+            var margin = 100/(colmn)
+            
+
+            for (var r = 0; r<row; r++) {
+                var div = document.createElement("div")
+                div.classList.add("row")
+
+                document.getElementById("sad").after(div)
+
+                var m = 0
+
+                for(var c = 0; c<colmn; c++) {
+
+                    if (random() == 1) {
+
+                        var svg = '<svg width="100px" height="100px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-left:' + m + '%"><circle cx="50" cy="50" r="50" /></svg>'
+
+                        div.innerHTML = div.innerHTML + svg
+                    }
+
+                    m = margin
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
